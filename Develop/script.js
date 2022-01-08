@@ -31,8 +31,15 @@ function generatePassword() {
       alert(" You entered " + passwordLength);
     }
     if(passwordLength < 8 || passwordLength > 128){
-      alert("The number of characters ( " + passwordLength + " ) is not valid.  Please choose a number between 8 and 128.");
+      alert("The number of characters ( " + passwordLength + " ) is not a valid entry.  Please choose a number between 8 and 128.");
+      return generatePassword();
     }
+  confirmUpper = confirm("Does your password require Upper case letters?  Choose 'ok' for yes, 'cancel' for no.");
+  confirmLower = confirm("Does your password require Lower case Letters?  Choose 'ok' for yes, 'cancel' for no.");
+  confirmSpecial = confirm("Does your password require Special Characters?  Choose 'ok' for yes, 'cancel' for no.");
+  confirmNumber = confirm("Does your password require Numbers?  Choose 'ok' for yes, 'cancel' for no.");
+  console.log(confirmUpper, confirmLower, confirmSpecial, confirmNumber);
+
     
 
 }
