@@ -12,18 +12,18 @@ var upperCase = ["A", "B", "C", "D", "E", "F", "g", "h", "I", "J", "K", "L", "M"
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialCharacter = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+var password
 
 //* Write the Password to the Page
 function writePassword() {
   password = generatePassword();
   var passwordText = document.querySelector("#password");
-      
-   passwordText.value = password;
+      passwordText.value = password;
       
       }
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
 function generatePassword() {
   //*Password Length Question *//
   passwordLength = prompt("How many characters does your password require?  Choose between 8 and 128");
@@ -71,7 +71,8 @@ function generatePassword() {
   //*Must Choose One Option if all False*//
       if(confirmUpper == false && confirmLower == false && confirmSpecial == false && confirmNumber == false) {
       inputOptions = alert("You must choose atleast one of the previous options.");
-      }
+        return generatePassword();
+    }
   //*Potential Input Selections*//
       if(confirmUpper == true && confirmLower == true && confirmSpecial == true && confirmNumber == true) {
         inputOptions = upperCase.concat(lowerCase, specialCharacter, numbers);
@@ -124,6 +125,8 @@ function generatePassword() {
         var randomPassword = inputOptions[Math.floor(Math.random() * inputOptions.length)];
         passwordBlank.push(randomPassword);
       }
-      var password = passwordBlank.join("");
+      password = passwordBlank.join("");
       alert("Your Password is: " + password);
-        }
+      console.log(password);
+}
+    
