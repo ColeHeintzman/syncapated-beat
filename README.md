@@ -1,4 +1,4 @@
-# Password Generator Starter Code
+# Password Generator
 
 Are you tired of trying to piece together passwords for all of your accounts?  Your password is too weak, your password requires atleast one special character, ahhh, the frustration.  Releieve your anxiety by using the Password Generator.  With just 5 easy questions to answer, generate passwords that will leave any hacker disconnected.
 
