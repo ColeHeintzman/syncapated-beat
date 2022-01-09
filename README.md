@@ -4,6 +4,8 @@ Are you tired of trying to piece together passwords for all of your accounts?  Y
 
 ![image](https://user-images.githubusercontent.com/95318031/148687242-2837aa2b-0a41-4325-a9f1-9f20ab1230ab.png)
 
+Link to your password generator experience:
+https://coleheintzman.github.io/syncapated-beat/
 
 
 
